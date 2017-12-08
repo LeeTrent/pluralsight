@@ -1,3 +1,14 @@
-﻿<Properties StartupConfiguration="{3E56BBFD-081A-426D-BA2B-208D56DE3755}|Default">
+﻿<Properties StartupConfiguration="{AE5DDD47-3D12-48DF-97D6-DABC43F05F35}|Default">
+  <MonoDevelop.Ide.ItemProperties.OdeToFood PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood/Startup.cs">
+    <Files>
+      <File FileName="OdeToFood/Startup.cs" Line="30" Column="63" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

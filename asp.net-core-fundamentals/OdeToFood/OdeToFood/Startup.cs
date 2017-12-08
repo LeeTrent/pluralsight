@@ -27,7 +27,7 @@ namespace OdeToFood
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Hello World on Fri Dec8 8:52 AM");
             });
         }
     }

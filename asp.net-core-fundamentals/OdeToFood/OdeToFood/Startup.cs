@@ -24,10 +24,15 @@ namespace OdeToFood
                               IHostingEnvironment env,
                               IGreeter greeter)
         {
-            if (env.IsDevelopment())
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
+
+            app.UseWelcomePage(new WelcomePageOptions
             {
-                app.UseDeveloperExceptionPage();
-            }
+                Path = "/wp"
+            });
 
             app.Run(async (context) =>
             {

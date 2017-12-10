@@ -68,7 +68,7 @@ namespace OdeToFood
                 var greeting = greeter.getMessageOfTheDay();
 
                 //await context.Response.WriteAsync(greeting);
-                await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName}");
+                await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName} : {env.ApplicationName} : {env.ContentRootPath} : {env.WebRootPath}");
             });
         }
     }

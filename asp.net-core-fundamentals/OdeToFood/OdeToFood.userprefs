@@ -1,6 +1,10 @@
 ﻿<Properties StartupConfiguration="{E8B36D55-5B62-4D7F-98AE-12391DFB8098}|Default">
   <MonoDevelop.Ide.ItemProperties.OdeToFood PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood/Properties/launchSettings.json">
+    <Files>
+      <File FileName="OdeToFood/Properties/launchSettings.json" Line="15" Column="46" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

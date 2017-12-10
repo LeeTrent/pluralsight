@@ -54,14 +54,21 @@ namespace OdeToFood
             //    Path = "/wp"
             //});
 
-            app.UseDeveloperExceptionPage();
+            //app.UseDeveloperExceptionPage();
 
             app.Run(async (context) =>
             {
-                throw new Exception("Exception thrown in Startu's app.run()");
+                //throw new Exception("Exception thrown in Startu's app.run()");
+
+                if (env.IsDevelopment())
+                {
+                    app.UseDeveloperExceptionPage();
+                }
 
                 var greeting = greeter.getMessageOfTheDay();
-                await context.Response.WriteAsync(greeting);
+
+                //await context.Response.WriteAsync(greeting);
+                await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName}");
             });
         }
     }

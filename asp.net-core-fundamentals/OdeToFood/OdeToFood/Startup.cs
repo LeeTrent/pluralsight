@@ -31,31 +31,35 @@ namespace OdeToFood
             //    app.UseDeveloperExceptionPage();
             //}
 
-            app.Use(next =>
-            {
-                return async context =>
-                {
-                    logger.LogInformation("Request incoming ...");
-                    if (context.Request.Path.StartsWithSegments("/mym"))
-                    {
-                        await context.Response.WriteAsync("Hit!!");
-                        logger.LogInformation("Request handled");
-                    }
-                    else 
-                    {
-                        await next(context);
-                        logger.LogInformation("Response not handled - outgoing ...");
-                    }
-                };   
-            });
+            //app.Use(next =>
+            //{
+            //    return async context =>
+            //    {
+            //        logger.LogInformation("Request incoming ...");
+            //        if (context.Request.Path.StartsWithSegments("/mym"))
+            //        {
+            //            await context.Response.WriteAsync("Hit!!");
+            //            logger.LogInformation("Request handled");
+            //        }
+            //        else 
+            //        {
+            //            await next(context);
+            //            logger.LogInformation("Response not handled - outgoing ...");
+            //        }
+            //    };   
+            //});
 
-            app.UseWelcomePage(new WelcomePageOptions
-            {
-                Path = "/wp"
-            });
+            //app.UseWelcomePage(new WelcomePageOptions
+            //{
+            //    Path = "/wp"
+            //});
+
+            app.UseDeveloperExceptionPage();
 
             app.Run(async (context) =>
             {
+                throw new Exception("Exception thrown in Startu's app.run()");
+
                 var greeting = greeter.getMessageOfTheDay();
                 await context.Response.WriteAsync(greeting);
             });

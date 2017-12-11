@@ -17,8 +17,9 @@ namespace OdeToFood.Controllers
                 Id = 1, 
                 Name = "Linda's Vegan Kitchen"
             };
-            return new ObjectResult(model);
 
+            return View(model);
+            //return new ObjectResult(model);
             //return Content("Hello from HomeController.Index(), returning IActionResult and extending base Controller");
         }
     }

@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{E8B36D55-5B62-4D7F-98AE-12391DFB8098}|Default">
   <MonoDevelop.Ide.ItemProperties.OdeToFood PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood/Controllers/AboutController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood/Controllers/HomeController.cs">
     <Files>
-      <File FileName="OdeToFood/Controllers/AboutController.cs" Line="12" Column="10" />
+      <File FileName="OdeToFood/Models/Restaurant.cs" Line="22" Column="1" />
+      <File FileName="OdeToFood/Controllers/HomeController.cs" Line="18" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

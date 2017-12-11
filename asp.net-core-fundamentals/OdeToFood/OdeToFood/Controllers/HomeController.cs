@@ -1,15 +1,25 @@
 ﻿using System;
+using Microsoft.AspNetCore.Mvc;
+using OdeToFood.Models;
+
 namespace OdeToFood.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
         public HomeController()
         {
         }
 
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello from HomeController Index() method";
+            var model = new Restaurant
+            { 
+                Id = 1, 
+                Name = "Linda's Vegan Kitchen"
+            };
+            return new ObjectResult(model);
+
+            //return Content("Hello from HomeController.Index(), returning IActionResult and extending base Controller");
         }
     }
 }

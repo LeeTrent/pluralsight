@@ -4,12 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace OdeToFood.Controllers
 {
     [Route("about")]
+    //[ Route ( "[controller]/[action]" ) ]
     public class AboutController
     {
-        public AboutController()
-        {
-        }
-
         [Route("")]
         public string Index()
         {

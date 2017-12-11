@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -63,13 +64,29 @@ namespace OdeToFood
             //app.UseFileServer();
 
             app.UseStaticFiles();
-            app.UseMvcWithDefaultRoute();
+            //app.UseMvcWithDefaultRoute();
+            //app.UseMvc();
+            app.UseMvc(ConfigureRoutes);
 
             app.Run(async (context) =>
             {
                 var greeting = greeter.getMessageOfTheDay();
-                await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName} : {env.ApplicationName} : {env.ContentRootPath} : {env.WebRootPath}");
+                //await context.Response.WriteAsync($"{greeting} : {env.EnvironmentName} : {env.ApplicationName} : {env.ContentRootPath} : {env.WebRootPath}");
+                context.Response.ContentType = "text/plain";
+                await context.Response.WriteAsync($"Not found");
             });
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            // /Home/Index
+            //routeBuilder.MapRoute("Default", "{controller}/{action}");
+
+            // /Home/Index/4 (ID is optional)
+            routeBuilder.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+
+            // admin/Home/Index
+            //routeBuilder.MapRoute("Default", "admin/{controller}/{action}");
         }
     }
 }

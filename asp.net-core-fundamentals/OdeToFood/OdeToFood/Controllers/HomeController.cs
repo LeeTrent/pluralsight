@@ -9,7 +9,7 @@ namespace OdeToFood.Controllers
 
         public string Index()
         {
-            return "Hello from HomeController";
+            return "Hello from HomeController Index() method";
         }
     }
 }

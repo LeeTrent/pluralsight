@@ -1,12 +1,6 @@
 ﻿<Properties StartupConfiguration="{E8B36D55-5B62-4D7F-98AE-12391DFB8098}|Default">
   <MonoDevelop.Ide.ItemProperties.OdeToFood PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="OdeToFood/Views/Home/Index.cshtml">
-    <Files>
-      <File FileName="OdeToFood/Models/Restaurant.cs" Line="22" Column="1" />
-      <File FileName="OdeToFood/Controllers/HomeController.cs" Line="21" Column="27" />
-      <File FileName="OdeToFood/Views/Home/Index.cshtml" Line="9" Column="8" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

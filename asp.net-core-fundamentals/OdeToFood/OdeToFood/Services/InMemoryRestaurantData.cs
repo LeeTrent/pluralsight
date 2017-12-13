@@ -25,7 +25,8 @@ namespace OdeToFood.Services
         public IEnumerable<Restaurant> GetAll()
         {
             // CAUTION - NOT THREAD SAFE!!
-            return _restaurants.OrderBy(r => r.Name);
+            //return _restaurants.OrderBy(r => r.Name);
+            return _restaurants.OrderBy(r => r.Id);
         }
     }
 }

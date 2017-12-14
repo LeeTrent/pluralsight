@@ -9,12 +9,21 @@
     </head>
     <body>
         <h1>@Model.CurrentMessage</h1>
-        <table>
+        <table cellpadding="3">
             @foreach(var restaurant in Model.Restaurants)
             {
                 <tr>
                     <td>@restaurant.Id</td>
                     <td>@restaurant.Name</td>
+                    <td>
+                        <a href="/home/details/@restaurant.Id">Details</a>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Go", "Details", "Home", new { id=restaurant.Id })
+                    </td>                
+                    <td>
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@restaurant.Id">More</a>
+                    </td>   
                 </tr>
             }
         </table>

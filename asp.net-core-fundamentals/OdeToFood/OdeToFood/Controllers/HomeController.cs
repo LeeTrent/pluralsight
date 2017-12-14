@@ -36,5 +36,18 @@ namespace OdeToFood.Controllers
             //return new ObjectResult(model);
             //return Content("Hello from HomeController.Index(), returning IActionResult and extending base Controller");
         }
+
+        public IActionResult Details(int id) 
+        {
+            var model = _restaurantData.Get(id);
+            if (model == null) 
+            {
+                //return NotFound();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+
+            //return Content(id.ToString());
+        }
     }
 }

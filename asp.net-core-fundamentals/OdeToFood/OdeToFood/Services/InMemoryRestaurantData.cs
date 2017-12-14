@@ -22,6 +22,11 @@ namespace OdeToFood.Services
             };
         }
 
+        public Restaurant Get(int id)
+        {
+            return _restaurants.FirstOrDefault(r => r.Id == id);
+        }
+
         public IEnumerable<Restaurant> GetAll()
         {
             // CAUTION - NOT THREAD SAFE!!

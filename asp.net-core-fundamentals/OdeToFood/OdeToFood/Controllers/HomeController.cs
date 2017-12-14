@@ -49,5 +49,9 @@ namespace OdeToFood.Controllers
 
             //return Content(id.ToString());
         }
+
+        public IActionResult Create() {
+            return View();
+        }
     }
 }

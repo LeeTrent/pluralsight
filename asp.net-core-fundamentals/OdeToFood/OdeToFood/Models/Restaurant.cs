@@ -17,5 +17,10 @@ namespace OdeToFood.Models
             get;
             set;
         }
+        public CuisineType Cuisine
+        {
+            get;
+            set;
+        }
     }
 }

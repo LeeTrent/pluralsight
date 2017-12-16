@@ -8,9 +8,5 @@
             asp-items="@Html.GetEnumSelectList<CuisineType>()">
     </select>   
 
-    <select asp-for="Cuisine" asp-items="Html.GetEnumSelectList<CuisineType>()">
-        <option selected="selected" value="">Please select</option>
-    </select>    
-    
-    <input type="submit" name="save" value="Save"/>
+<input type="submit" name="save" value="Save"/>
 </form>

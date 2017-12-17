@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace OdeToFood.Models
 {
     public class Restaurant
@@ -7,20 +9,14 @@ namespace OdeToFood.Models
         {
         }
 
-        public int Id
-        {
-            get;
-            set;
-        }      
-        public string Name
-        {
-            get;
-            set;
-        }
-        public CuisineType Cuisine
-        {
-            get;
-            set;
-        }
+        public int Id { get; set; }
+
+        [Display(Name="Restaurant Name")]
+        [Required]
+        [MaxLength(80)]
+        public string Name { get; set; } 
+
+        [Required]
+        public CuisineType Cuisine { get; set; }
     }
 }
